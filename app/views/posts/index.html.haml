@@ -1,0 +1,7 @@
+.contents
+  - @posts.each do |post|
+    .content
+      = post.text
+= form_with model: @post, html: {class: "new_post"}, local: true do |f|
+  = f.text_area :text
+  = f.submit
